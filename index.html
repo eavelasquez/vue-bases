@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Vue.js Intro</title>
+</head>
+
+<body>
+  <!--- Vue.js Component -->
+  <div id="app" class="demo">
+    <h1>Hello World from app.js!</h1>
+    <!-- Declarative Rendering -->
+    <p>Counter: {{ counter }}</p>
+    <p>{{ 1 + 1 }}</p>
+    <p>{{ '1' + '1' }}</p>
+    <p>{{ true }}</p>
+    <p>{{ false }}</p>
+    <p>{{ [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] }}</p>
+    <p>{{ { a: 1, b: 2 } }}</p>
+    <p>{{ [{}, {} , {}, []] }}</p>
+    <p>{{ true ? 'active' : 'inactive' }}</p>
+
+    <hr />
+
+    <!-- Handling User Input -->
+    <strong>{{ quote }}</strong>
+    <blockquote> -{{ author }}</blockquote>
+
+    <button v-on:click="changeQuote">Change Quote</button>
+
+    <p>{{ message }}</p>
+    <input type="text" v-model="message">
+    <br />
+    <button v-on:click="reverseMessage">Reverse Message</button>
+
+    <hr />
+
+    <!-- Create an instance of the quotes component -->
+
+    <quotes></quotes>
+  </div>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
