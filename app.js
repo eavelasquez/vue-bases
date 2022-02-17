@@ -62,9 +62,9 @@ const app = Vue.createApp({
       this.quote = 'I\'m Ironman'
       this.author = 'Tony Stark'
 
-      this.capitalizeQuote()
+      this.uppercaseQuote()
     },
-    capitalizeQuote(_) {
+    uppercaseQuote(_) {
       this.quote = this.quote.toUpperCase()
     },
     reverseMessage(_) {
